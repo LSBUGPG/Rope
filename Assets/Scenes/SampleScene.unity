@@ -208,7 +208,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178976308}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.36, y: -4, z: 0}
+  m_LocalPosition: {x: 2.93, y: -4, z: 0}
   m_LocalScale: {x: 3, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -319,7 +319,6 @@ GameObject:
   - component: {fileID: 778948080}
   - component: {fileID: 778948079}
   - component: {fileID: 778948083}
-  - component: {fileID: 778948085}
   m_Layer: 0
   m_Name: Pivot
   m_TagString: Untagged
@@ -336,7 +335,7 @@ BoxCollider:
   m_GameObject: {fileID: 778948078}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
@@ -417,19 +416,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 62
   m_CollisionDetection: 0
---- !u!114 &778948085
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 778948078}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42b8df9fb4d3850448e4d00207691d99, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dog: {fileID: 1016575921}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +512,7 @@ GameObject:
   - component: {fileID: 1016575918}
   - component: {fileID: 1016575917}
   - component: {fileID: 1016575921}
+  - component: {fileID: 1016575922}
   m_Layer: 0
   m_Name: Dog
   m_TagString: Untagged
@@ -617,12 +604,28 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 10
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 8
   m_CollisionDetection: 0
+--- !u!114 &1016575922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1016575916}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b043624a4246ef4896fadbe34d714af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ropePrefab: {fileID: 641345433885342727, guid: b62cd153b92539d4f8bb1f4660ddd0d2,
+    type: 3}
+  pivot: {fileID: 778948082}
+  jumpForce: 5
 --- !u!1 &1037461355
 GameObject:
   m_ObjectHideFlags: 0
